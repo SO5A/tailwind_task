@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Bebas Neue;
+    src: url(/static/Bebas_Neue/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: Robo Flex;
+    src: url(/static/Robo_Flex/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf);
+}
+@font-face {
+    font-family: Roboto Condensed;
+    src: url(/static/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .active-dot{
+        background-color: #0147FF;
+    }
+  }
