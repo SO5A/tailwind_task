@@ -1,21 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  @font-face {
-    font-family: Bebas Neue;
-    src: url(/static/Bebas_Neue/BebasNeue-Regular.ttf);
-  }
-  @font-face {
-    font-family: Robo Flex;
-    src: url(/static/Robo_Flex/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf);
-  }
-  @font-face {
-    font-family: Roboto Condensed;
-    src: url(/static/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf);
-  }
-}
 
 @layer utilities {
   .active-dot {
