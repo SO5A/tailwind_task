@@ -14,7 +14,7 @@ module.exports = {
       fontFamily: {
         'roboto-condensed': ['Roboto Condensed', 'sans-serif'],
         'roboto-flex': ['Roboto Flex', 'sans-serif'],
-        'bebas-neue':["Bebas Neue", 'sans-serif'],
+        'bebas-neue': ['Bebas Neue', 'sans-serif'],
       },
       keyframes: {
         'open-menu': {

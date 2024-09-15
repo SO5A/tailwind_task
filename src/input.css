@@ -1,22 +1,44 @@
-@font-face {
-    font-family: Bebas Neue;
-    src: url(/static/Bebas_Neue/BebasNeue-Regular.ttf);
-}
-@font-face {
-    font-family: Robo Flex;
-    src: url(/static/Robo_Flex/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf);
-}
-@font-face {
-    font-family: Roboto Condensed;
-    src: url(/static/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf);
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-    .active-dot{
-        background-color: #0147FF;
-    }
+@layer base {
+  @font-face {
+    font-family: Bebas Neue;
+    src: url(/static/Bebas_Neue/BebasNeue-Regular.ttf);
   }
+  @font-face {
+    font-family: Robo Flex;
+    src: url(/static/Robo_Flex/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf);
+  }
+  @font-face {
+    font-family: Roboto Condensed;
+    src: url(/static/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf);
+  }
+}
+
+@layer utilities {
+  .active-dot {
+    @apply bg-dark-blue;
+  }
+}
+@layer components {
+  .btn-primary {
+    @apply rounded-lg px-4 py-2 border-2 bg-dark-blue border-dark-blue text-blue-100  hover:text-dark-blue hover:bg-white duration-300 mr-8 font-roboto-flex text-[15px];
+  }
+  .btn-secondary {
+    @apply rounded-lg px-4 py-2 border-2 border-dark-blue text-dark-blue hover:bg-dark-blue hover:text-blue-100 duration-300 font-roboto-flex text-[15px];
+  }
+  .cars {
+    @apply box-content flex flex-none sm:snap-start snap-center;
+  }
+  .img-cars {
+    @apply sm:h-[446px] sm:w-[600px] h-[178px] w-[240px];
+  }
+  .dots {
+    @apply size-2 inline-flex flex-wrap cursor-pointer bg-[#F1F1F1] rounded-lg;
+  }
+  .max-size {
+    @apply max-w-[1800px] m-auto;
+  }
+}

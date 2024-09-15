@@ -9,9 +9,26 @@
     <script src="js/main.js" defer></script>
 </head>
 
-<body class="max-w-[1800px] m-auto">
-    <header class="relative">
-        <nav class="text-black top-0 pt-4 lg:px-28 px-10 flex justify-between z-30">
+<body class="">
+    <section id="mobile-menu"
+        class="max-size sticky top-0 bg-black text-white w-full text-5xl  flex-col justify-center origin-top animate-open-menu z-40 hidden">
+        <button class="absolute text-7xl -top-2 right-8">
+            &times
+        </button>
+        <nav class="flex flex-col text-4xl min-h-screen items-center justify-center">
+            <a href="#gallery" class="w-full text-center hover:opacity-90 py-6">
+                Zobacz Galerie
+            </a>
+            <a href="#faq" class="w-full text-center hover:opacity-90 py-6">
+                FaQ
+            </a>
+            <a href="#faq" class="w-full text-center   hover:opacity-90 py-6">
+                Zadzwoń do nas
+            </a>
+        </nav>
+    </section>
+    <header class="max-size relative">
+        <nav class="text-black top-0 pt-4 lg:px-[120px] px-10 flex justify-between z-30">
             <div class="z-10">
                 <h1 class="text-4xl center">
                     <img src="./img/logo.png" class="h-8" />
@@ -28,8 +45,7 @@
                 </div>
             </div>
             <div class="z-10 hidden sm:block">
-                <button
-                    class="rounded-lg px-4 py-2 border-2 bg-dark-blue border-dark-blue text-blue-100  hover:text-dark-blue hover:bg-white duration-300 font-roboto-flex text-[15px]">
+                <button class="btn-primary">
                     Zadzwoń do nas
                 </button>
             </div>
@@ -39,9 +55,8 @@
                 </div>
             </button>
         </nav>
-
-        <div class="relative z-20">
-            <article class="sm:pt-[120px] pt-16 sm:pb-[240px] pb-48 lg:px-28 px-10">
+        <section class="relative z-20 m:m-12 m-0">
+            <article class="sm:pt-[120px] pt-16 sm:pb-[240px] pb-52 lg:px-28 px-10 ">
                 <h1
                     class=" sm:text-7xl text-5xl font-normal tracking-[-0.04em] text-left sm:pb-10 pb-5 font-bebas-neue">
                     Sprzedajemy samochody <br>z Europy
@@ -49,40 +64,19 @@
                 <h2 class="sm:pb-10 pb-5 font-roboto-condensed text-base">
                     Kup komfortowy pojazd, aby każda podróż <br>była wyjątkowym przeżyciem.
                 </h2>
-                <button onclick="location.href='#gallery'"
-                    class=" rounded-lg px-4 py-2 border-2 bg-dark-blue border-dark-blue text-blue-100  hover:text-dark-blue hover:bg-white duration-300 mr-8 font-roboto-flex text-[15px] my-4">
+                <button onclick="location.href='#gallery'" class=" btn-primary my-4">
                     Zobacz zdjęcia
                 </button>
-                <button
-                    class="rounded-lg px-4 py-2 border-2 border-dark-blue text-dark-blue hover:bg-dark-blue hover:text-blue-100 duration-300 font-roboto-flex text-[15px] my-4">
+                <button class="btn-secondary my-4">
                     Zadzwoń do nas
                 </button>
             </article>
-        </div>
-        <div class=" flex items-end">
-            <img src="./img/vectors.png"
-                class="absolute md:flex top-0 right-20 lg:h-[80%] lg:w-[50%] h-[90%] w-[80%] z-0">
-            <img src="./img/cars.png" class="absolute bottom-0 right-0 lg:w-[75%] w-[95%] z-10">
-        </div>
+        </section>
+        <img src="./img/vectors.png"
+            class="absolute md:flex top-0 md:right-20 right-5 lg:h-[80%] lg:w-[45%] h-[90%] w-[80%] z-0">
+        <img src="./img/cars.png" class="absolute m:bottom-12 bottom-0 right-0 lg:w-[75%] w-[95%] z-10">
     </header>
-    <section id="mobile-menu"
-        class="absolute top-0 bg-black text-white w-full text-5xl  flex-col justify-center origin-top animate-open-menu z-40 hidden pb-10">
-        <button class="absolute text-7xl -top-2 right-8">
-            &times
-        </button>
-        <nav class="flex flex-col text-4xl min-h-screen items-center justify-center">
-            <a href="#gallery" class="w-full text-center hover:opacity-90 py-6">
-                Zobacz Galerie
-            </a>
-            <a href="#faq" class="w-full text-center hover:opacity-90 py-6">
-                FaQ
-            </a>
-            <a href="#faq" class="w-full text-center   hover:opacity-90 py-6">
-                Zadzwoń do nas
-            </a>
-        </nav>
-    </section>
-    <section id="gallery" class="-scroll-m-28 pt-20">
+    <main id="gallery" class="max-size -scroll-m-28 pt-20">
         <nav class="lg:px-28 px-10">
             <h3 class="text-dark-blue text-[21.5px] font-roboto-condensed">Prezentacja firmy</h3>
             <h2 class="text-[40px] font-normal font-bebas-neue">
@@ -99,44 +93,38 @@
             </h4>
         </nav>
 
-
         <section id="passenger-cars" class="py-20 lg:pl-28  pl-10 gallery">
             <div id="inner" class="carousel sm:space-x-16 space-x-4 ">
-                <div id="item1" class="box-content flex flex-none sm:snap-start snap-center">
-                    <img src="./img/car1.png" class=" sm:h-[446px] sm:w-[600px] h-[178px] w-[240px]" />
+                <div id="item1" class="cars">
+                    <img src="./img/car1.png" class="img-cars" />
                 </div>
-                <div id="item2" class="box-content flex flex-none sm:snap-start snap-center">
-                    <img src="./img/car2.png" class=" sm:h-[446px] sm:w-[600px] h-[178px] w-[240px]" />
+                <div id="item2" class="cars">
+                    <img src="./img/car2.png" class="img-cars" />
                 </div>
-                <div id="item3" class="box-content flex flex-none sm:snap-start snap-center">
-                    <img src="./img/car3.png" class=" sm:h-[446px] sm:w-[600px] h-[178px] w-[240px]" />
+                <div id="item3" class="cars">
+                    <img src="./img/car3.png" class="img-cars" />
                 </div>
-                <div id="item4" class="box-content flex flex-none sm:snap-start snap-center">
-                    <img src="./img/car2.png" class=" sm:h-[446px] sm:w-[600px] h-[178px] w-[240px]" />
+                <div id="item4" class="cars">
+                    <img src="./img/car2.png" class="img-cars" />
                 </div>
-                <div id="item5" class="box-content flex flex-none sm:snap-start snap-center">
-                    <img src="./img/car1.png" class=" sm:h-[446px] sm:w-[600px] h-[178px] w-[240px]" />
+                <div id="item5" class="cars">
+                    <img src="./img/car1.png" class="img-cars" />
                 </div>
             </div>
             <div id="map" class="flex w-full justify-center gap-2 py-2 pt-12">
-                <a href="#item1" id="dot"
-                    class="size-2 inline-flex flex-wrap cursor-pointer bg-[#F1F1F1] rounded-lg active-dot img"></a>
-                <a href="#item2" id="dot"
-                    class="size-2 inline-flex flex-wrap cursor-pointer bg-[#F1F1F1] rounded-lg img"></a>
-                <a href="#item3" id="dot"
-                    class="size-2 inline-flex flex-wrap cursor-pointer bg-[#F1F1F1] rounded-lg img"></a>
-                <a href="#item4" id="dot"
-                    class="size-2 inline-flex flex-wrap cursor-pointer bg-[#F1F1F1] rounded-lg img"></a>
-                <a href="#item5" id="dot"
-                    class="size-2 inline-flex flex-wrap cursor-pointer bg-[#F1F1F1] rounded-lg img"></a>
+                <a href="#item1" id="dot" class="dots img active-dot"></a>
+                <a href="#item2" id="dot" class="dots img"></a>
+                <a href="#item3" id="dot" class="dots img"></a>
+                <a href="#item4" id="dot" class="dots img"></a>
+                <a href="#item5" id="dot" class="dots img"></a>
             </div>
         </section>
         <section id="delivery-vans" class="gallery hidden py-[120px]">
         </section>
-    </section>
+    </main>
 
-    <section id="faq" class="pt-[88px] bg-fotter-neutral text-white">
-        <div class="lg:px-28 px-10 grid sm:grid-cols-2 sm:gap-20 gap-10 pb-5">
+    <footer id="faq" class="bg-fotter-neutral text-white">
+        <section class="max-size pt-[88px] lg:px-28 px-10 grid sm:grid-cols-2 sm:gap-20 gap-10 pb-5">
             <article>
                 <h2 class="pb-5 font-bebas-neue text-[25px]">
                     Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit nulla commodo.
@@ -167,9 +155,9 @@
                     This is the additional text that will be revealed when the button is clicked.
                 </p>
             </article>
-        </div>
+        </section>
         <hr>
-        <footer class="lg:px-28  px-10 flex justify-between py-5">
+        <section class="max-size lg:px-28  px-10 flex justify-between py-5">
             <div>
                 <h2 class="text-base font-roboto-condensed">
                     Cars Sport
@@ -180,8 +168,8 @@
                     Polityka prywatności
                 </h2>
             </div>
-        </footer>
-    </section>
+        </section>
+    </footer>
 </body>
 
 </html>
